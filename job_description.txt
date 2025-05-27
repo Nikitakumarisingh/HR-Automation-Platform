@@ -1,0 +1,20 @@
+Job Title: Software Engineer
+
+We are looking for a passionate Software Engineer to design, develop and install software solutions.
+
+Responsibilities:
+- Write clean, scalable code using Python, Java, or similar languages
+- Participate in system design and architecture
+- Troubleshoot, debug and upgrade existing systems
+- Collaborate with cross-functional teams
+
+Requirements:
+- Proven experience as a Software Developer or similar role
+- Familiarity with Agile development methodologies
+- Knowledge of JavaScript frameworks (e.g., React, Angular)
+- Experience with databases and version control (Git)
+- Excellent problem-solving skills
+
+Preferred Skills:
+- Cloud experience (Azure, AWS)
+- Good communication and teamwork skills
