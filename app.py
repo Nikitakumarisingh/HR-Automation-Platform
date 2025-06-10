@@ -21,15 +21,30 @@ with tabs[0]:
     uploaded_zip = st.file_uploader("Upload ZIP of Resumes (PDF format only)", type="zip")
     num_to_shortlist = st.number_input("Number of candidates to shortlist", min_value=1, step=1)
 
-    # Load job description from file
-    try:
-        with open("job_description.txt", "r") as file:
-            job_description = file.read()
-    except FileNotFoundError:
-        job_description = ""
-        st.error("❌ 'job_description.txt' not found. Please create this file in the project root.")
+    # Default job description (editable)
+    default_jd = """Job Title: Software Engineer
 
-    st.text_area("📄 Job Description Preview (from job_description.txt)", job_description, height=200, disabled=True)
+We are looking for a passionate Software Engineer to design, develop and install software solutions.
+
+Responsibilities:
+- Write clean, scalable code using Python, Java, or similar languages
+- Participate in system design and architecture
+- Troubleshoot, debug and upgrade existing systems
+- Collaborate with cross-functional teams
+
+Requirements:
+- Proven experience as a Software Developer or similar role
+- Familiarity with Agile development methodologies
+- Knowledge of JavaScript frameworks (e.g., React, Angular)
+- Experience with databases and version control (Git)
+- Excellent problem-solving skills
+
+Preferred Skills:
+- Cloud experience (Azure, AWS)
+- Good communication and teamwork skills
+"""
+
+    job_description = st.text_area("📄 Job Description (Editable)", value=default_jd, height=300)
 
     if st.button("🔍 Analyze Resumes"):
         if uploaded_zip and job_description and num_to_shortlist:
